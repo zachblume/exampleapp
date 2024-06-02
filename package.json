@@ -8,7 +8,7 @@
         "start": "next start",
         "lint": "next lint",
         "migrate": "prisma migrate deploy",
-        "vercel-build": "npm run migrate && npm run build",
+        "vercel-build": "npm run migrate && npm run build"
     },
     "dependencies": {
         "next": "14.2.3",
