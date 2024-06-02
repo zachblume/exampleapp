@@ -1,10 +1,13 @@
 import pg from 'pg';
 
 // Create a connection to db
-const pool = new pg.Pool({
-  database:"postgres",
-  user:"postgres",
-  password:"mysecretpassword",
+const pool = new pg.Pool(
+  
+  {
+  // database:"postgres",
+  // user:"postgres",
+  // password:"mysecretpassword",
+  connectionString: process.env.POSTGRES_URL
 })
 
 export default async (req, res) => {
