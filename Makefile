@@ -6,3 +6,9 @@ start:
 	# first, docker up the db
 	docker run --name example-app-db -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres
 	npm run dev
+
+stop:
+	@echo "Destroy the database"
+	docker rm -f example-app-db
+
+clean: stop start
